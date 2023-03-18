@@ -50,6 +50,20 @@ public class ArbolBinario {
             imprimirNotacionPolaca(nodo.derecho);
         }
     }
+    
+     public void imprimirInorder() {
+        System.out.print("Inorder: ");
+        imprimirInorder(raiz);
+        System.out.println();
+    }
+
+    private void imprimirInorder(Nodo nodo) {
+        if (nodo != null) {
+            imprimirInorder(nodo.izquierdo);
+            System.out.print(nodo.valor + " ");
+            imprimirInorder(nodo.derecho);
+        }
+    }
 
     public  void imprimirArbolVertical() {
         Map<Integer, List<String>> niveles = new TreeMap<>();

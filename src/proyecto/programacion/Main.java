@@ -21,6 +21,7 @@ public class Main {
             // Recursividad
             double resultado = resolverExpresion(arbol.raiz);
             System.out.println("El resultado es: " + resultado);
+            System.out.println("hola mundo");
         } else {
             System.out.println("La expresion no es valida");
         }

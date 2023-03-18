@@ -49,29 +49,20 @@ public class ArbolBinario {
             imprimirNotacionPolaca(nodo.izquierdo);
             imprimirNotacionPolaca(nodo.derecho);
         }
-        
-         public void imprimirNotacionpostorden() {
-        System.out.print("Notación Postorden: ");
-        this.imprimirNotaciionpostorden(this.raiz);
+    }
+    
+     public void imprimirInorder() {
+        System.out.print("Inorder: ");
+        imprimirInorder(raiz);
         System.out.println();
     }
 
-    private void imprimirNotaciionpostorden(Nodo nodo) {
-        if (nodo==null){
-            return;
-        }else{
-            this.imprimirNotacionPolaca(nodo.izquierdo);
-            this.imprimirNotacionPolaca(nodo.derecho);
+    private void imprimirInorder(Nodo nodo) {
+        if (nodo != null) {
+            imprimirInorder(nodo.izquierdo);
             System.out.print(nodo.valor + " ");
-
+            imprimirInorder(nodo.derecho);
         }
-
-    } 
-        
-        
-        
-        
-        
     }
 
     public  void imprimirArbolVertical() {

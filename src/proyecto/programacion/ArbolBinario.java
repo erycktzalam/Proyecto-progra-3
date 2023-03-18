@@ -56,7 +56,7 @@ public class ArbolBinario {
         obtenerNodosPorNivel(raiz, niveles, 0);
 
         int altura = alturaArbol(raiz);
-        int espacios = 3 * (altura - 1);
+        int espacios = 4 * (altura - 1);
 
         for (int i = 0; i < altura; i++) {
             for (int j = 0; j < espacios; j++) {

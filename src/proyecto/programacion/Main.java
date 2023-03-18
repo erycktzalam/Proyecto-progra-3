@@ -18,6 +18,7 @@ public class Main {
             arbol.imprimirArbolVertical();
             System.out.println("------------------------------------");
             arbol.imprimirNotacionPolaca();
+            arbol.imprimirInorder();
             // Recursividad
             double resultado = resolverExpresion(arbol.raiz);
             System.out.println("El resultado es: " + resultado);

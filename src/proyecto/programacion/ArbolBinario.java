@@ -1,4 +1,4 @@
-package proyecto.programacion;
+package proyecto1prograiiifinalizado;
 
 import java.util.*;
 
@@ -33,6 +33,7 @@ public class ArbolBinario {
         }
         raiz = pila.pop();
     }
+
     // verificar si es un operador
     boolean esOperador(String token) {
         return token.equals("+") || token.equals("-") || token.equals("*") || token.equals("/") || token.equals("^") || token.equals("sqrt");
@@ -43,6 +44,7 @@ public class ArbolBinario {
         imprimirNotacionPolaca(raiz);
         System.out.println();
     }
+
     private void imprimirNotacionPolaca(Nodo nodo) {
         if (nodo != null) {
             System.out.print(nodo.valor + " ");
@@ -50,8 +52,8 @@ public class ArbolBinario {
             imprimirNotacionPolaca(nodo.derecho);
         }
     }
-    
-     public void imprimirInorder() {
+
+    public void imprimirInorder() {
         System.out.print("Inorder: ");
         imprimirInorder(raiz);
         System.out.println();
@@ -63,29 +65,27 @@ public class ArbolBinario {
             System.out.print(nodo.valor + " ");
             imprimirInorder(nodo.derecho);
         }
-        
-        
-          public void imprimirNotacionpostorden() {
+    }
+
+    public void imprimirPostorden() {
         System.out.print("Notación Postorden: ");
-        this.imprimirNotaciionpostorden(this.raiz);
+        imprimirPostorden(this.raiz);
         System.out.println();
     }
 
-    private void imprimirNotaciionpostorden(Nodo nodo) {
-        if (nodo==null){
+    private void imprimirPostorden(Nodo nodo) {
+        if (nodo != null) {
             return;
-        }else{
-            this.imprimirNotacionPolaca(nodo.izquierdo);
-            this.imprimirNotacionPolaca(nodo.derecho);
+        } else {
+            this.imprimirPostorden(nodo.izquierdo);
+            this.imprimirPostorden(nodo.derecho);
             System.out.print(nodo.valor + " ");
 
         }
 
     }
-        
-    }
 
-    public  void imprimirArbolVertical() {
+    public void imprimirArbolVertical() {
         Map<Integer, List<String>> niveles = new TreeMap<>();
         obtenerNodosPorNivel(raiz, niveles, 0);
 
@@ -110,7 +110,7 @@ public class ArbolBinario {
         }
     }
 
-    private  void obtenerNodosPorNivel(Nodo nodo, Map<Integer, List<String>> niveles, int nivel) {
+    private void obtenerNodosPorNivel(Nodo nodo, Map<Integer, List<String>> niveles, int nivel) {
         if (nodo == null) {
             return;
         }
@@ -125,7 +125,7 @@ public class ArbolBinario {
         obtenerNodosPorNivel(nodo.derecho, niveles, nivel + 1);
     }
 
-    private  int alturaArbol(Nodo nodo) {
+    private int alturaArbol(Nodo nodo) {
         if (nodo == null) {
             return 0;
         }

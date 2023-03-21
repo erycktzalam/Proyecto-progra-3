@@ -1,9 +1,10 @@
-package proyecto.programacion;
+package proyecto1prograiiifinalizado;
 
 import java.util.*;
 import javax.swing.JOptionPane;
 
-public class Main {
+public class Proyecto1PrograIIIFinalizado {
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -37,7 +38,7 @@ public class Main {
                             arbol.imprimirInorder();
                             break;
                         case 3:
-                            arbol.imprimirNotacionpostorden();
+                            arbol.imprimirPostorden();
                             break;
                         default:
                             System.out.println("Opción inválida");
@@ -181,5 +182,5 @@ public class Main {
         }
         return true;
     }
-
+    
 }
